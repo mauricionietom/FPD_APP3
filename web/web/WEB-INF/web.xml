@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ServletUsuario</servlet-name>
+        <servlet-class>Servlet.ServletUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletTransaccion</servlet-name>
+        <servlet-class>Servlet.ServletTransaccion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletBuscar</servlet-name>
+        <servlet-class>Servlet.ServletBuscar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletEmpleado</servlet-name>
+        <servlet-class>Servlet.ServletEmpleado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletGerente</servlet-name>
+        <servlet-class>Servlet.ServletGerente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletRendimiento</servlet-name>
+        <servlet-class>Servlet.ServletRendimiento</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUsuario</servlet-name>
+        <url-pattern>/ServletUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletTransaccion</servlet-name>
+        <url-pattern>/ServletTransaccion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletBuscar</servlet-name>
+        <url-pattern>/ServletBuscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEmpleado</servlet-name>
+        <url-pattern>/ServletEmpleado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletGerente</servlet-name>
+        <url-pattern>/ServletGerente</url-pattern>
+    </servlet-mapping>
+       <servlet-mapping>
+        <servlet-name>ServletRendimiento</servlet-name>
+        <url-pattern>/ServletRendimiento</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.autoreconf.AutoReconfigurableCORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowGenericHttpRequests</param-name>
+            <param-value>true</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.allowSubdomains</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, HEAD, POST, OPTIONS</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>*</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.exposedHeaders</param-name>
+            <param-value>X-Test-1, X-Test-2</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+		
+        <init-param>
+            <param-name>cors.maxAge</param-name>
+            <param-value>3600</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+       
+       
+       
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
