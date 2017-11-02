@@ -13,8 +13,8 @@ public class Comentario {
     
     private int IdCom;
     private String Descripcion; 
-    Usuario userLocal=new Usuario();
-    Usuario userExt = new Usuario();
+    Usuario idUser=new Usuario();
+    Experiencia idExp = new Experiencia();
 
     public int getIdCom() {
         return IdCom;
@@ -32,28 +32,27 @@ public class Comentario {
         this.Descripcion = Descripcion;
     }
 
-    public Usuario getUserLocal() {
-        return userLocal;
+    public Usuario getIdUser() {
+        return idUser;
     }
 
-    public void setUserLocal(Usuario userLocal) {
-        this.userLocal = userLocal;
+    public void setIdUser(Usuario idUser) {
+        this.idUser = idUser;
     }
 
-    public Usuario getUserExt() {
-        return userExt;
+    public Experiencia getIdExp() {
+        return idExp;
     }
 
-    public void setUserExt(Usuario userExt) {
-        this.userExt = userExt;
+    public void setIdExp(Experiencia idExp) {
+        this.idExp = idExp;
     }
 
     @Override
     public String toString() {
-        return "Comentario{" + "IdCom=" + IdCom + ", Descripcion=" + Descripcion + ", userLocal=" + userLocal + ", userExt=" + userExt + '}';
+        return "Comentario{" + "IdCom=" + IdCom + ", Descripcion=" + Descripcion + ", idUser=" + idUser + ", idExp=" + idExp + '}';
     }
     
     
-    
-    
-}
+
+    }
